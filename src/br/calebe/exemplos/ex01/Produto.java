@@ -4,10 +4,12 @@ public class Produto {
 
     private String nome;
     private double preco;
+    private String tipo;
 
-    public Produto(String nome, double preco) {
+    public Produto(String nome, double preco, String tipo) {
         this.nome = nome;
         this.preco = preco;
+        this.tipo = tipo;
     }
 
     public double getPreco() {
