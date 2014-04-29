@@ -24,4 +24,19 @@ public class ClasseExemploController implements EJBStatelessExemploInterface {
     public String metodo(int i) {
         return ejb.metodo(i);
     }
+    
+    @Override
+    public String pagamentoViaCartaoCredito(double valor) {
+        return ejb.pagamentoViaCartaoCredito(valor);
+        
+    }
+
+    @Override
+    public String controleEstoque(int itens) {
+        return ejb.controleEstoque(itens);
+    }
+    
+    
+    
+    
 }
