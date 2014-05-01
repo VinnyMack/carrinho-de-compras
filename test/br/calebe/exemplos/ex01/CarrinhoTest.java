@@ -10,8 +10,13 @@ import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.powermock.api.easymock.PowerMock;
+import org.powermock.core.classloader.annotations.PrepareForTest;
+import org.powermock.modules.junit4.PowerMockRunner;
 
+@RunWith(PowerMockRunner.class)
+@PrepareForTest({ClasseExemplo.class})
 public class CarrinhoTest {
 
     private Carrinho carrinho;
@@ -100,7 +105,7 @@ public class CarrinhoTest {
         assertTrue(carrinho.calculaValorTotal() == 4099.00);
     }
     
-    /*@Test
+    @Test
     public void realizarPagamentoCarrinho() throws Exception{
         
         double total;
@@ -136,7 +141,7 @@ public class CarrinhoTest {
        
         // Executa todas as verificação
         PowerMock.verifyAll();
-    }*/
+    }
     
     @Test
     public void controleDeEstoque() throws Exception{
